@@ -1,0 +1,45 @@
+{
+  "name": "Library",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "libraryId": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "founded": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Book": {
+      "type": "hasMany",
+      "model": "Book",
+      "foreignKey": "location"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
