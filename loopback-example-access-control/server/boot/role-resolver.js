@@ -77,12 +77,13 @@ module.exports = function(app) {
                 }
 
                 if (principalType && principalId) {
-                    roleMappingModel.findOne({
-                        roleId: roleId,
-                        principalType: principalType,
-                        principalId: principalId
-                    }, function (err, result) {
-                        done(!err && result); // The only arg is the result
+                    var ds = RoleMapping.app.dataSources.mongodb;
+                    ds.connector.collection('RoleMapping').findOne({
+                        'roleId': result.id,
+                        'principalType': principalType,
+                        'principalId': principalId
+                    }, function(err,cursor){
+                        done(!err && cursor); // The only arg is the result
                     });
                 } else {
                     process.nextTick(function () {
@@ -113,6 +114,8 @@ module.exports = function(app) {
       return reject();
     }
 
+    console.log(context.modelId)
+
     // check if userId is in team table for the given project id
     context.model.findById(context.modelId, function(err, project) {
       if (err || !project)
@@ -127,6 +130,8 @@ module.exports = function(app) {
           console.log(err);
           return cb(null, false);
         }
+
+        console.log(err, count)
 
         cb(null, count > 0); // true = is a team member
       });

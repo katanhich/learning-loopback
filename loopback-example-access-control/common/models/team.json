@@ -7,10 +7,10 @@
   },
   "properties": {
     "ownerId": {
-      "type": "string"
+      "type": "object"
     },
     "memberId": {
-      "type": "string",
+      "type": "object",
       "required": true
     }
   },

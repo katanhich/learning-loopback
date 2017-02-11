@@ -39,7 +39,7 @@
           admins via the `slc loopback:acl` command.</td>
       </tr>
       <tr>
-        <td><a href="/api/projects/1<% if (typeof accessToken !== 'undefined')
+        <td><a href="/api/projects/589e9ad7ed41501924f4d40f<% if (typeof accessToken !== 'undefined')
             { %>?access_token=<%= accessToken %><% } %>">Show balance for
             project 1</a></td>
         <td>Shows all fields for project 1</td>
@@ -57,7 +57,7 @@
               'undefined') { %>?access_token=<%= accessToken %><% } %>"
               method="post">
             <label for="amount">Donate</h2>
-            <input type="hidden" name="id" value="1">
+            <input type="hidden" name="id" value="589e9ad7ed41501924f4d40f">
             <input type="text" name="amount" value="100">
             <input type="submit" value="Submit">
           </form>
@@ -76,7 +76,7 @@
             'undefined') { %>?access_token=<%= accessToken %><% } %>"
             method="post">
             <label for="amount">Withdraw</h2>
-            <input type="hidden" name="id" value="1">
+            <input type="hidden" name="id" value="589e887249c5c017f8ee949d">
             <input type="text" name="amount" value="100">
             <input type="submit" value="Submit">
           </form>

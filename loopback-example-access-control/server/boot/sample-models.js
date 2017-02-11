@@ -25,6 +25,8 @@ module.exports = function (app) {
 
                 console.log('Created project:', project);
 
+                console.log(typeof users[0].id)
+
                 // add team members
                 Team.create([
                     { ownerId: project.ownerId, memberId: users[0].id },
