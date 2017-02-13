@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Customer": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Order": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Account": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Address": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "Author": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "Book": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "EmailAddress": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "Link": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "Reader": {
+    "dataSource": "mongodb",
+    "public": true
+  }
+}
