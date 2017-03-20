@@ -1,0 +1,14 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory",
+    "localStorage": "",
+    "file": "db.json"
+  },
+  "photos": {
+    "name": "photos",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/files"
+  }
+}
