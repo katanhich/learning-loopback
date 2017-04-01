@@ -40,5 +40,9 @@
   "hotel": {
     "dataSource": "mysql",
     "public": true
+  },
+  "Service": {
+    "dataSource": "mysql",
+    "public": true
   }
 }
